@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mouse Event</title>
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+</head>
+<body>
+    <p>Yasin Beken</p>
+    <p id="degis">Neos Yazılım Akademi</p>
+    <p id="hover">Hover Olan</p>
+    <script>
+        $(document).ready(function(){
+            $("#degis").mouseenter(function(){
+            $(this).html("Fare üzerinde ve bir daha değişmeyecek bu yazı")
+        })
+        $("p").mouseleave(function(){
+            $(this).html("Mouse Ayrıldı")
+        })
+        $("#hover").hover(
+            function(){
+                $(this).html("Hover tetiklendi")
+            },
+            function(){
+                $(this).html("Hover Olan")
+            }
+        )
+        })
+        
+    </script>
+</body>
+</html>
